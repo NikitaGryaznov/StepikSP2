@@ -1,5 +1,6 @@
+from selenium.common.exceptions import (NoSuchElementException)
 
-class BasePage():
+class BasePage(object):
     def __init__(self, browser, url):
         self.browser = browser
         self.url = url
