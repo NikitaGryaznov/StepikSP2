@@ -28,3 +28,8 @@ class ProductPage(BasePage):
         product_price = self.browser.find_element(*ProductPageLocators.PRODUCT_PRICE).text
         # Проверяем, что цена товара присутствует в сообщении со стоимостью корзины
         assert product_price in message_basket_total, "No product price in the message"
+
+    def equal_product_name(self):
+        product_name = self.browser.find_element(*ProductPageLocators.PRODUCT_NAME).text
+        message_product_name = self.browser.find_element(*ProductPageLocators.MESSAGE_ABOUT_ADDING_PRODUCT_NAME).text
+        assert product_name == message_product_name, "Different product name"
