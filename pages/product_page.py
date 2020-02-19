@@ -33,3 +33,9 @@ class ProductPage(BasePage):
         product_name = self.browser.find_element(*ProductPageLocators.PRODUCT_NAME).text
         message_product_name = self.browser.find_element(*ProductPageLocators.MESSAGE_ABOUT_ADDING_PRODUCT_NAME).text
         assert product_name == message_product_name, "Different product name"
+
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(*ProductPageLocators.MESSAGE_ABOUT_ADDING), "message presented"
+
+    def should_disable_success_message(self):
+        assert self.is_disappeared(*ProductPageLocators.MESSAGE_ABOUT_ADDING), "element dont disabled"
