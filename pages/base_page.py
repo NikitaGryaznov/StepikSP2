@@ -20,7 +20,7 @@ class BasePage(object):
         link = self.browser.find_element(*BasePageLocators.LOGIN_LINK)
         link.click()
 
-    def go_to_basket_page(self):
+    def go_to_basket_page2(self):
         link = self.browser.find_element(*BasePageLocators.SHOW_TO_BASKET)
         link.click()
 

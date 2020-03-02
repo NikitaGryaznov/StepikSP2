@@ -27,4 +27,4 @@ class BasePageLocators:
 
 class BasketPageLockators:
     GET_PURCHASE = (By.XPATH, "//a[@class='btn btn-lg btn-primary btn-block']")
-    EMPTY_BASKET_TEXT = (By.XPATH, "//div[2]/div/div[3]/div[2]/p/text()")
+    EMPTY_BASKET_TEXT = (By.CSS_SELECTOR, "#content_inner>p")

@@ -7,4 +7,4 @@ class BasketPage(BasePage):
         assert self.is_not_element_present(*BasketPageLockators.GET_PURCHASE), "В корзине есть товары"
 
     def basket_empty_text(self):
-        assert self.is_element_present(*BasketPageLockators.EMPTY_BASKET_TEXT), "text is not presented"
+        assert self.browser.find_element(*BasketPageLockators.EMPTY_BASKET_TEXT) is not None, "text is not presented"
